@@ -2,12 +2,24 @@
 <html ng-app>
 <head>
 </head>
-<body ng-init="customers=[{name:'John Smith', city:'Phoenix'},{name:'John Doe', city:'New York'},{name:'Jane Doe',city:'New York'}]">
-		Name: <input type="text" ng-model="name" /> {{ name }}
+<body>
+	<div ng-controller="SimpleController">
+		Name:
+		 <input type="text" ng-model="name" />
 		<br>
 		<ul>
-			<li ng-repeat="cust in customers | filter:name | orderBy:'city'">{{ cust.name | uppercase }} - {{ cust.city | lowercase}}</li>
+			<li ng-repeat="cust in customers | filter:name | orderBy:'city'"></li>
 		</ul>
+	</div>
 		<script src="js/angular.min.js"></script>
+		<script>
+			function SimpleController($scope) {
+				$scope.customers = [
+				{ name:'John Smith', city:'Phoenix' },
+				{ name:'John Doe', city:'New York' },
+				{ name:'Jane Doe',city:'San Francisco' }
+				];
+			}
+		</script>
 </body>
 </html>
