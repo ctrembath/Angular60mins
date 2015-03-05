@@ -3,9 +3,13 @@
 <head>
 </head>
 <body>
-	<div class="container">
-		Name: <input type="text" ng-model="name" /> {{ name }}
-	</div>
+	<div class="container"
+	ng-init="names=['clare','jordon','dave','ben']">
+
+	<h3>Looping with the ng-repeat Directive</h3>
+	<ul>
+		<li ng-repeat="name in names">{{ name }}</li>
+	</ul>
 		<script src="js/angular.min.js"></script>
 </body>
 </html>
