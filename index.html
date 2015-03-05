@@ -2,14 +2,12 @@
 <html ng-app>
 <head>
 </head>
-<body>
-	<div class="container"
-	ng-init="names=['clare','jordon','dave','ben']">
-
-	<h3>Looping with the ng-repeat Directive</h3>
-	<ul>
-		<li ng-repeat="name in names">{{ name }}</li>
-	</ul>
+<body ng-init="names=['John Smith', 'John Doe', 'Jane Doe']">
+		Name: <input type="text" ng-model="name" /> {{ name }}
+		<br>
+		<ul>
+			<li ng-repeat="personName in names">{{ personName }}</li>
+		</ul>
 		<script src="js/angular.min.js"></script>
 </body>
 </html>
