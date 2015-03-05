@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app>
+<html ng-app="demoApp">
 <head>
 </head>
 <body>
@@ -13,6 +13,7 @@
 	</div>
 		<script src="js/angular.min.js"></script>
 		<script>
+		var demoApp = angular.module('demoApp', []);
 			function SimpleController($scope) {
 				$scope.customers = [
 				{ name:'John Smith', city:'Phoenix' },
@@ -20,6 +21,7 @@
 				{ name:'Jane Doe',city:'San Francisco' }
 				];
 			}
+			demoApp.controller('SimpleController', SimpleController);
 		</script>
 </body>
 </html>
