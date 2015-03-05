@@ -2,11 +2,11 @@
 <html ng-app>
 <head>
 </head>
-<body ng-init="names=['John Smith', 'John Doe', 'Jane Doe']">
+<body ng-init="customers=[{name:'John Smith', city:'Phoenix'},{name:'John Doe', city:'London'},{name:'Jane Doe',city:'New York'}]">
 		Name: <input type="text" ng-model="name" /> {{ name }}
 		<br>
 		<ul>
-			<li ng-repeat="personName in names">{{ personName }}</li>
+			<li ng-repeat="cust in customers">{{ cust.name }} - {{ cust.city }}</li>
 		</ul>
 		<script src="js/angular.min.js"></script>
 </body>
