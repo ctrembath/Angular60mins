@@ -14,14 +14,16 @@
 		<script src="js/angular.min.js"></script>
 		<script>
 		var demoApp = angular.module('demoApp', []);
-			function SimpleController($scope) {
+
+		var controllers = {};
+		controllers.SimpleController = function ($scope) {
 				$scope.customers = [
 				{ name:'John Smith', city:'Phoenix' },
 				{ name:'John Doe', city:'New York' },
-				{ name:'Jane Doe',city:'San Francisco' }
+				{ name:'Jane Doe', city:'San Francisco' }
 				];
 			}
-			demoApp.controller('SimpleController', SimpleController);
+			demoApp.controller(controllers);
 		</script>
 </body>
 </html>
